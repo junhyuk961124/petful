@@ -335,7 +335,7 @@ document.addEventListener('DOMContentLoaded', function () {
 document
   .getElementById('inquiry-form')
   .addEventListener('submit', function (e) {
-    e.preventDefault(); // 폼 기본 제출 동작을 막음
+    e.preventDefault(); // 기본 폼 제출 동작을 방지
 
     // 폼 데이터 가져오기
     const companyName = document.getElementById('company-name').value;
@@ -345,17 +345,17 @@ document
     const referralSource = document.getElementById('referral-source').value;
     const inquiries = document.getElementById('inquiries').value;
 
-    // Google Apps Script로 전송할 데이터
+    // 전송할 데이터 객체
     const data = {
-      companyName: companyName,
-      personInCharge: personInCharge,
-      contact: contact,
-      email: email,
-      referralSource: referralSource,
-      inquiries: inquiries,
+      companyName,
+      personInCharge,
+      contact,
+      email,
+      referralSource,
+      inquiries,
     };
 
-    // Google Apps Script의 웹 애플리케이션 URL
+    // Google Apps Script 웹 애플리케이션 URL (실제 URL로 교체해야 합니다)
     const scriptURL =
       'https://script.google.com/macros/s/AKfycbyt-eEkwV9HUwiXcu4FF1uG9F9gbvOr2HQK3uo-bZQI1B3L5PVnJRCLFVgzaKd-XVgS/exec';
 
@@ -366,21 +366,19 @@ document
       headers: {
         'Content-Type': 'application/json',
       },
-      mode: 'cors', // CORS 모드로 설정
     })
-      .then((response) => response.json()) // 응답을 JSON으로 변환
-      .then((data) => {
-        console.log('Success:', data);
-        if (data.result === 'success') {
-          // 성공적으로 전송되면 모달을 표시
-          const modal = new bootstrap.Modal(document.getElementById('myModal'));
-          modal.show();
+      .then((response) => response.json())
+      .then((responseData) => {
+        if (responseData.status === 'success') {
+          alert('문의가 성공적으로 제출되었습니다!');
+          // 폼 초기화 (필요에 따라 추가)
+          document.getElementById('inquiry-form').reset();
         } else {
-          alert('데이터 전송에 실패했습니다. 다시 시도해주세요.');
+          alert('문의 제출에 실패했습니다. 다시 시도해주세요.');
         }
       })
       .catch((error) => {
         console.error('Error:', error);
-        alert('오류가 발생했습니다.');
+        alert('오류가 발생했습니다. 나중에 다시 시도해주세요.');
       });
   });
