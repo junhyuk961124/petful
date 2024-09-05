@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PETFUL: 반려동물 인플루언서와 협업하여 사업 성장에 도움을 줍니다."
+    />
+    <meta
+      name="keywords"
+      content="반려동물, 인플루언서, 마케팅, 반려동물 사업, 체험단, 기자단, 공동구매"
+    />
+
+    <title>PETFUL</title>
+    <!-- 부트스트랩 추가 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <!-- 외부스타일 시트 추가 -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- 이후 작성은 이아래로 진행 -->
+    <!-- 내부 스타일 시트 -->
+    <style>
+      .blog-post {
+        margin-bottom: 20px;
+      }
+      .blog-post h3 {
+        margin: 0;
+        font-size: 18px;
+      }
+      .blog-post p {
+        margin: 5px 0;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <!-- 헤더 네비게이션바 -->
+    <header class="header" id="header">
+      <!-- 네비게이션바가 작성될 컨테이너 -->
+      <div class="navbar container nav-container">
+        <!-- 네비바 좌측 이미지와 우측 네비게이션 탭 -->
+        <div class="nav-header">
+          <img src="../img/logo.png" id="logoimg" />
+        </div>
+        <!-- 네비바 로그인 버튼과 패밀리사이트 이동 칸 -->
+        <div class="navbar" id="navLinks">
+          <ul class="navbar-button">
+            <!-- 네비바 로그인 버튼 -->
+            <li class="login">
+              <button type="button" class="login-button">파트너 로그인</button>
+            </li>
+            <!-- 네비바 드롭다운 패밀리사이트 -->
+            <li class="dropdown">
+              <button class="dropdown-button">Family Site</button>
+              <ul class="dropdown-menu">
+                <li><a href="#">체험단보기</a></li>
+                <li><a href="#">펫플루언서</a></li>
+                <li><a href="#">펫플서치</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- 메인 작성 부분입니다. -->
+    <main>
+      <!-- 섹션0 슬라이드 배경입니다 -->
+      <div id="slider-container">
+        <div id="main-slider">
+          <div class="slide">
+            <img src="../img/main2.jpg" alt="bg-main-01" />
+          </div>
+          <div class="slide">
+            <img src="../img/main3.jpg" alt="bg-main-02" />
+          </div>
+          <div class="slide">
+            <img src="../img/main1.jpg" alt="bg-main-03" />
+          </div>
+        </div>
+      </div>
+
+      <!-- 최상단 1섹션 안쪽 부분입니다. -->
+      <section>
+        <div class="container intro-content">
+          <div class="top-intro-txt">
+            <span class="font-bold">'반려동물'</span> 인플루언서와 협업하는
+            <br class="hide-on-desk" />가장 효율적인 방법
+          </div>
+          <h1 class="page-heading">PETFUL PARTNERS</h1>
+          <div>
+            <hr class="short-break-line" />
+          </div>
+          <div class="intro-txt-second">
+            반려동물 사업에 딱 맞는 맞춤 체험단을 찾으시나요?
+            <br />
+            판매 증진, 사업 확장에 관해 생각하시나요?
+            <br />
+            인플루언서 마케팅, 높은 비용으로 고민되시나요?
+          </div>
+          <p class="intro-txt-third">
+            반려동물 전문 체험단 '펫플루언서'와 함께 해결해 보세요.
+          </p>
+          <!-- 페이지 슬라이드 클릭 부분 시작 -->
+          <div class="indicator">
+            <div class="icons">
+              <a role="button" id="prevButton">
+                <img
+                  src="https://d13zo8jzfzdg6k.cloudfront.net/partners-v1/production/static/admin/_/img/loginpage/introduction/icon/ic-prev.svg"
+                  alt="Previous Slide"
+                />
+              </a>
+              <a role="button" id="playPauseButton">
+                <img
+                  id="playPauseIcon"
+                  src="https://d13zo8jzfzdg6k.cloudfront.net/partners-v1/production/static/admin/_/img/loginpage/introduction/icon/ic-stop.svg"
+                  alt="Pause"
+                />
+              </a>
+              <a role="button" id="nextButton">
+                <img
+                  src="https://d13zo8jzfzdg6k.cloudfront.net/partners-v1/production/static/admin/_/img/loginpage/introduction/icon/ic-next.svg"
+                  alt="Next Slide"
+                />
+              </a>
+            </div>
+            <div class="index font-bold">
+              <span id="currentSlide" class="current">03</span>
+              <span class="slash font-500">/</span>
+              <span id="totalSlides" class="total">03</span>
+            </div>
+          </div>
+          <!-- 페이지 슬라이드 클릭 부분 끝 -->
+          <div class="btn-actions" id="btn-actions">
+            <button class="btn btn-white" id="startButton">
+              <span class="btn-txt ng-binding">다운로드</span>
+              <span class="arrow"></span>
+              <!-- <img ng-src="{{'/static/admin/_/img/loginpage/introduction/icon/ic-arrow-right.svg' | staticUrl}}" alt=""> -->
+            </button>
+            <button id="inquiry-button" class="btn btn-violet">
+              <span class="btn-txt ng-binding">문의하기</span>
+              <span class="arrow"></span>
+            </button>
+
+            <!-- <img ng-src="{{'/static/admin/_/img/loginpage/introduction/icon/ic-arrow-right-w.svg' | staticUrl}}" alt=""> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 메인 섹션 2 펫플은 어떤 서비스일까요? -->
+      <section class="kind-of-service">
+        <!-- 섹션2의 컨테이너 입니다 -->
+        <div class="container">
+          <h2 class="section-heading color-w">펫플은 어떤 서비스 일까요?</h2>
+          <p class="short-desc">
+            <strong>'반려동물' </strong>인플루언서와 쉽고 편하게 효과있는
+            <br />
+            반려동물 전문 체험단으로 전문성, 성과, 피드 퀄리티를 보여드립니다.
+            캠페인을 직접 진행하세요.
+          </p>
+          <!-- 컨테이너 안에 이미지, 텍스트를 묶어 column을 3개 만들어요 -->
+          <div class="row">
+            <!-- 첫번쨰 컬럼입니다 -->
+            <div class="col-md-4 service-type row-center">
+              <div>
+                <div class="icons">
+                  <img
+                    class="img"
+                    ng-src="../img/icon1.png"
+                    alt="PETFUL"
+                    src="../img/icon1.png"
+                  />
+                </div>
+                <div class="content">
+                  <h4
+                    class="service-title letter-space-04 ng-scope"
+                    translate="first_title_kind_of_service"
+                  >
+                    하나에 <br />
+                    집중합니다
+                  </h4>
+                  <ul
+                    class="service-content ng-scope"
+                    translate="kind_of_service_1_content"
+                  >
+                    <li>• 반려동물 관련 기업</li>
+                    <li>• 반려동물 인플루언서</li>
+                    <li>• 반려동물 서비스</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- 두번쨰 컬럼입니다 -->
+            <div class="col-md-4 service-type row-center">
+              <div>
+                <div class="icons">
+                  <img
+                    class="img"
+                    ng-src="../img/icon2.png"
+                    alt="PETFUL"
+                    src="../img/icon2.png"
+                  />
+                </div>
+                <div class="content">
+                  <h4
+                    class="service-title letter-space-04 ng-scope"
+                    translate="second_title_kind_of_service"
+                  >
+                    전문성을 갖춘 <br />
+                    인플루언서를 만나보세요
+                  </h4>
+                  <ul
+                    class="service-content ng-scope"
+                    translate="kind_of_service_2_content"
+                  >
+                    <li>• 반려동물 전문 프로 인플루언서</li>
+                    <li>• 월등하게 높은 성과</li>
+                    <li>• 퀄리티 높은 인플루언서 피드</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- 세번째 컬럼입니다 -->
+            <div class="col-md-4 service-type row-center">
+              <div>
+                <div class="icons">
+                  <img
+                    class="img"
+                    ng-src="../img/icon3.png"
+                    alt="PETFUL"
+                    src="../img/icon3.png"
+                  />
+                </div>
+                <div class="content">
+                  <h4
+                    class="service-title letter-space-04 ng-scope"
+                    translate="third_title_kind_of_service"
+                  >
+                    아주 쉽게 <br />
+                    직접운영할 수 있어요
+                  </h4>
+                  <ul
+                    class="service-content ng-scope"
+                    translate="kind_of_service_3_content"
+                  >
+                    <li>• 다양한 기능과 툴로 원하는대로</li>
+                    <li>• 직관적인 UX/UI 쉽고 편하게</li>
+                    <li>• 비용은 줄이고 성과는 높이고</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 메인 섹션 3 펫플 서비스의 장점은 무엇이 있을까요? -->
+      <section class="what-do-you-like-section introduction-page">
+        <div class="introduction-container">
+          <h2 class="section-heading letter-space-04">
+            펫플루언서 파트너는 <br />
+            무엇이 좋나요?
+          </h2>
+
+          <div class="container d-flex row-reverse-desk pt-7-lg">
+            <div class="col-equal">
+              <div class="col-txt">
+                <h3 class="index mt-22 letter-space-091">01</h3>
+                <strong class="title-block letter-space-04">
+                  디테일이 살아있는 <br />
+                  인플루언서 서칭
+                </strong>
+                <ul class="txt-block">
+                  <li>
+                    • 지속적인 제안으로 브랜드에 핏한 인플루언서를 찾을 수
+                    있어요.
+                  </li>
+                  <li>
+                    • 프로 회원 인증 과정을 통해 좋은 인플루언서 풀을 유지 ·
+                    관리합니다.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-equal img-block-1">
+              <div class="col-img relative">
+                <img
+                  id="main-img-1"
+                  class="main-img"
+                  src="https://d13zo8jzfzdg6k.cloudfront.net/partners-v1/production/static/admin/_/img/loginpage/introduction/img-partners-benefit-01-01.png"
+                  alt="RPETFUL"
+                />
+                <img
+                  id="small-img-1-1"
+                  class="absolute small-img-1"
+                  src="https://d13zo8jzfzdg6k.cloudfront.net/partners-v1/production/static/admin/_/img/loginpage/introduction/img-partners-benefit-01-02.svg"
+                  alt="PETFUL"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="container d-flex row-reverse-desk pt-7-lg">
+            <div class="col-equal img-block-1">
+              <div class="col-img relative">
+                <img
+                  id="main-img-1"
+                  class="main-img"
+                  src="../img/petfulintro1.png"
+                  alt="RPETFUL"
+                />
+                <img
+                  id="small-img-1-1"
+                  class="absolute small-img-1"
+                  src="https://d13zo8jzfzdg6k.cloudfront.net/partners-v1/production/static/admin/_/img/loginpage/introduction/img-partners-benefit-01-02.svg"
+                  alt="PETFUL"
+                />
+              </div>
+            </div>
+            <div class="col-equal">
+              <div class="col-txt">
+                <h3 class="index mt-22 letter-space-091">02</h3>
+                <strong class="title-block letter-space-04">
+                  구축 되어있는 <br />
+                  반려동물 커뮤니티
+                </strong>
+                <ul class="txt-block">
+                  <li>
+                    • 반려동물 커뮤니티를 통해 서비스, 용품을 소개해보세요.
+                  </li>
+                  <li>• 기존 체험단과 남다른 퀄리티 뛰어난 성과와 혜택!</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 섹션 4 함께한 브랜드 -->
+      <section class="brands-section">
+        <div class="container introduction-container">
+          <h2 class="section-heading letter-space-04 plusjun">
+            함께한 <br />
+            대표 브랜드
+          </h2>
+          <div class="lg-view">
+            <img
+              src="https://d13zo8jzfzdg6k.cloudfront.net/partners-v1/production/static/admin/_/img/loginpage/introduction/brand/img-brand.png"
+              alt="PETFUL"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- 메인 섹션 5 작성된 블로그 글 -->
+
+      <section id="influencers" class="influencers-section">
+        <div class="container introduction-container">
+          <h2 class="section-heading letter-space-04">
+            반려동물 <br />
+            정보 제공 서비스
+          </h2>
+          <div id="blog-posts" class="blog-posts">
+            <div class="blog-post">
+              <img src="../img/dogcafe2.jpg" alt="Blog Thumbnail 1" />
+              <strong class="blog-title">반려동반 카페</strong>
+              <p class="blog-description">
+                애견카페 및 애견동반 가능한 카페 모음
+              </p>
+            </div>
+            <div class="blog-post">
+              <img src="../img/dogfood.jpg" alt="Blog Thumbnail 2" />
+              <strong class="blog-title">반려동반 식당</strong>
+              <p class="blog-description">반려동물 동반 가능한 식당 모음</p>
+            </div>
+            <div class="blog-post">
+              <img src="../img/doghotel.jpg" alt="Blog Thumbnail 3" />
+              <strong class="blog-title">반려동반 숙소</strong>
+              <p class="blog-description">
+                반려동물 숙박시설 및 동반 가능한 숙소 모음
+              </p>
+            </div>
+            <div class="blog-post">
+              <img src="../img/dogplay2.jpg" alt="Blog Thumbnail 3" />
+              <strong class="blog-title">반려동물 놀이터</strong>
+              <p class="blog-description">
+                반려동물들이 뛰어놀 수 있는 장소 모음
+              </p>
+            </div>
+            <div class="blog-post">
+              <img src="../img/dogitem.jpg" alt="Blog Thumbnail 3" />
+              <strong class="blog-title">반려동물 용품</strong>
+              <p class="blog-description">
+                반려동물들에게 필요한 자그만한 선물
+              </p>
+            </div>
+            <div class="blog-post">
+              <img src="../img/dogsurvice.jpg" alt="Blog Thumbnail 3" />
+              <strong class="blog-title">반려동물 서비스</strong>
+              <p class="blog-description">
+                반려동물 케어, 미용, 병원 등 서비스
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 메인 섹션 6 빠른 상담 문의 -->
+      <section class="inquiry-section" id="anchor-sec-contact">
+        <div class="container introduction-container relative bg-mobile">
+          <h2
+            id="contact-section"
+            class="section-heading letter-space-04 pt-11 mb-14"
+          >
+            빠른 상담 문의
+          </h2>
+          <p class="desc mb-59">
+            문의를 남겨주시면 담당자가 <br class="hide-on-desk" />
+            바로 연락을 드립니다.
+          </p>
+
+          <div class="form-wrapper">
+            <div class="form-content">
+              <form id="inquiry-form">
+                <div class="input-row">
+                  <div class="group-input">
+                    <label for="company-name">업체명</label>
+                    <input
+                      type="text"
+                      id="company-name"
+                      placeholder="업체명입력"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="input-row">
+                  <div class="group-input">
+                    <label for="person-in-charge">담당자 명</label>
+                    <input
+                      type="text"
+                      id="person-in-charge"
+                      placeholder="이름 입력"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="input-row">
+                  <div class="group-input">
+                    <label for="contact">연락처</label>
+                    <input
+                      type="tel"
+                      id="contact"
+                      placeholder="010-1234-5678"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="input-row">
+                  <div class="group-input">
+                    <label for="email">이메일</label>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="example@petful.com"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="input-row">
+                  <div class="group-input">
+                    <label for="referral-source">방문 경로</label>
+                    <select id="referral-source" required>
+                      <option value="">선택</option>
+                      <option value="petful-customer">펫플 고객사</option>
+                      <option value="internet-search">인터넷 검색</option>
+                      <option value="online-ad">온라인 광고</option>
+                      <option value="recommendation">주변 추천</option>
+                      <option value="other">기타</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input-row">
+                  <div class="group-input">
+                    <label for="inquiries">문의내용</label>
+                    <textarea
+                      rows="2"
+                      id="inquiries"
+                      placeholder="문의내용"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="submit-btn-wrapper mt-69">
+                  <button class="btn-submit-inquiry" type="submit">
+                    문의하기
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div class="image-wrapper">
+              <img
+                class="full-width"
+                src="https://d13zo8jzfzdg6k.cloudfront.net/partners-v1/production/static/admin/_/img/loginpage/introduction/img-contact.png"
+                alt="PETFUL"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- 모달 HTML -->
+        <div id="myModal" class="modal" tabindex="-1">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">문의 완료</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <p>문의가 접수되었습니다. 곧 연락드리겠습니다!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 푸터 작성란입니다 -->
+    <footer id="anchor-sec-contact">
+      <div class="introduction-container">
+        <div class="footer-logo">
+          <img src="../img/logo.png" alt="PETFUL" />
+        </div>
+        <div class="footer-content">
+          <div class="left-info">
+            <p>
+              펫플루언서 <span class="seperate">|</span> 대표 이사: 박준혁
+              <br />
+              개인 정보 보호 최고 책임자: 박준혁
+            </p>
+            <p>
+              사업자등록번호 : 123-45-67890 <br />
+              통신판매업신고번호 제2024-서울강남-00000호
+            </p>
+            <p>주소 : 경기 성남시 분당구 판교로 (판교동)</p>
+            <p>
+              메일 :
+              <a href="cwsw132@naver.com">cwsw132@naver.com</a>
+              <span class="seperate">|</span> 전화 :
+              <a href="tel:010-9914-9300">010-9914-9300</a>
+              <span class="seperate">|</span> 팩스 : 031-000-0000
+            </p>
+            <strong
+              ><span class="font-bold">©</span> PETFUL Corporation. All Rights
+              Reserved.</strong
+            >
+          </div>
+          <div class="right-info">
+            <strong class="phone">010-9914-9300</strong>
+            <p>월-금 10:00-17:00 / 주말, 공휴일 휴무</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 부트스트랩 추가 -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- 자바스크립트 추가 -->
+    <script src="index.js"></script>
+  </body>
+</html>

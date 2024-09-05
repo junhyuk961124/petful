@@ -1,0 +1,1045 @@
+/* <!-- Reset css 추가--> */
+@import url(./Reset.css);
+
+/* font 추가 */
+@import url(https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css);
+
+/*top-intro-txt 에 관란 부분입니다.  */
+.container.intro-content .top-intro-txt {
+  margin-top: 35px;
+  letter-spacing: -0.4px;
+  font-size: 1.25vw;
+}
+.intro-content .top-intro-txt .font-bold {
+  letter-spacing: -0.5px;
+  font-size: 1.5625vw;
+}
+
+.top-intro-txt .hide-on-desk {
+  display: none;
+}
+.indicator {
+  justify-content: flex-end;
+  line-height: 1.5625vw;
+}
+
+/* 텍스트 부분입니다. */
+.font-bold {
+  font-weight: 700;
+}
+/*top-intro-txt 에 관한 끝부분입니다.  */
+/*top-intro-txt의 텍스트 수정 부분입니다.  */
+.page-heading {
+  margin-top: 0.8vw;
+  margin-bottom: 3.8vw;
+  font-size: 4.2vw;
+}
+
+.intro-txt-second {
+  font-size: 0.83vw;
+  margin-bottom: 1.5625vw;
+}
+.intro-txt-third {
+  margin-bottom: 7.3vw;
+  font-size: 0.83vw;
+}
+/*top-intro-txt의 텍스트 수정 끝부분입니다.  */
+
+/* 기본설정 */
+
+/* body 및 슬라이드 컨테이너 부분입니다 */
+body {
+  margin: auto;
+  line-height: normal;
+  color: #fff;
+}
+#body-content {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+  width: 100%;
+}
+body[lang='ko'] {
+  font-family: Pretendard, sans-serif;
+}
+body[lang='ko'],
+body[lang='ko'] button,
+body[lang='ko'] input {
+  letter-spacing: -0.2px;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Pretendard, sans-serif;
+}
+body {
+  /* font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; */
+  font-size: 100%;
+  line-height: 1.42857143;
+  /* color: #333; */
+}
+
+/* 슬라이드 컨테이너 부분입니다 */
+#slider-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#main-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide img {
+  width: 100%;
+  height: 100vh;
+}
+
+/* header, navber 섹션입니다. */
+
+.header {
+  z-index: 100;
+  height: auto;
+  position: fixed;
+  top: 0px;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  display: block;
+  background-color: #fff;
+  /* 나중에 컬러 수정해야함 */
+  color: black;
+}
+.header.hidden {
+  top: -100px; /* 스크롤 업 또는 최상단일 때 헤더 숨김 */
+}
+
+.navbar {
+  transition: opacity 0.3s ease-in-out; /* 투명도 애니메이션 */
+}
+
+.navbar.hidden {
+  opacity: 0; /* 우측 버튼을 제외한 네비게이션 링크들 숨김 */
+}
+
+.navbar-button li {
+  display: inline-block;
+}
+
+.login {
+  display: inline-block;
+}
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* 네비바에 대한 내용입니다. */
+.nav-container {
+  width: 1300px;
+  margin: auto;
+  display: flex;
+}
+
+.navbar {
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  margin-left: auto;
+}
+
+.nav-header img {
+  height: 2.5em; /* 원하는 높이로 설정 */
+  width: auto; /* 가로 비율을 유지하며 크기 조절 */
+  max-width: 100%;
+}
+
+.login {
+  list-style-type: none;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.dropdown {
+  list-style-type: none;
+}
+
+.navbar-button {
+  display: flex;
+  justify-content: flex-end;
+  float: right;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.nav-container .navbar {
+  margin-bottom: 0;
+}
+
+/* 네비안의 드롭다운 버튼에 대한 내용입니다. */
+
+.navbar-button {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-button li {
+  margin-left: 20px; /* 버튼 사이 간격 */
+}
+
+.login-button {
+  font-size: 16px; /* 글씨 크기 조절 */
+  padding: 8px 16px; /* 버튼 내부 패딩 조절 */
+  background-color: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  font-size: 16px; /* 글씨 크기 조절 */
+  padding: 8px 0px 8px 16px; /* 버튼 내부 패딩 조절 */
+  background-color: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dropdown-menu {
+  display: none; /* 기본적으로 드롭다운 메뉴 숨김 */
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dropdown-menu li {
+  padding: 8px 16px;
+}
+
+.dropdown-menu li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block; /* 드롭다운 버튼에 마우스를 올렸을 때 메뉴 표시 */
+}
+
+/* 메인 섹션1 */
+
+.intro-content {
+  padding-top: 120px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+}
+
+/* 라인 */
+.short-break-line {
+  margin-bottom: 1.8vw;
+  width: 60px;
+}
+
+/* 페이지슬라이드 클릭 부분  */
+.indicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  /* margin: 20px auto; */
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 8px;
+  margin-left: auto;
+}
+
+.icons a {
+  margin: 0 10px;
+}
+
+.index {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.font-500 {
+  font-weight: 500;
+}
+
+/* 옵션같은거 */
+.none {
+  display: none;
+}
+
+/* 시작하기, 문의하기 버튼입니다. */
+/* 버튼설정 시작부분입니다. */
+
+.btn-actions {
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s;
+  z-index: 10;
+  right: auto;
+}
+
+.indicator {
+  justify-content: flex-end;
+  line-height: 1.5625vw;
+}
+
+.btn-actions .btn.btn-white {
+  background-color: #fff;
+  color: #272727;
+  border: 1px solid #ddd;
+}
+
+.btn.btn-violet {
+  background-color: #6236ff;
+  color: #fff;
+  border: 1px solid #6236ff;
+}
+
+.btn-actions .btn {
+  font-size: 0.83vw;
+  padding: 1.0417vw 1.0417vw 2.2396vw 1.5625vw;
+  min-width: 220px;
+
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 21px 20px; */
+  border-radius: 0;
+  /* font-size: 12px; */
+  border: 0;
+  box-shadow: none !important;
+  /* min-width: 125px; */
+}
+
+/* 버튼설정 끝부분입니다. */
+
+/* 섹션 2입니다 */
+/* .kind-of-service 에대한 내용입니다. */
+
+.kind-of-service {
+  padding-top: 6.25vw;
+  padding-bottom: 6.4vw;
+  background-color: #000;
+}
+
+/* kind-of-service의 p태그 */
+.kind-of-service .short-desc {
+  font-size: 1.042vw;
+  margin-bottom: 9.375vw;
+  font-weight: 400;
+}
+
+/* @media (min-width: 992px) {
+  .kind-of-service .container {
+    padding-left: 17.7vw;
+    padding-right: 17.7vw;
+  }
+} */
+
+.color-w {
+  color: #fff;
+}
+
+.txt-block {
+  color: #000;
+  padding-left: 0;
+  font-size: 1.042em;
+}
+
+.section-heading {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  font-weight: 700;
+  margin-bottom: 1.46vw;
+}
+
+/* 컬럼부분입니다 */
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  display: flex;
+}
+.row-center {
+  display: flex;
+  justify-content: center;
+}
+
+.kind-of-service .service-type {
+  display: flex;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+/* 아이콘 및 콘텐츠입니다 */
+
+.icons {
+  margin-bottom: 1.823vw;
+  display: flex; /* Flexbox를 사용해 중앙 정렬 */
+  justify-content: left; /* 가로 중앙 정렬 */
+  align-items: center; /* 세로 중앙 정렬 (부모 요소 높이가 있을 경우) */
+  height: 100%; /* 부모 요소의 전체 높이 사용 */
+}
+
+/* 이미지 스타일 */
+.icons img {
+  max-width: 100%; /* 이미지가 컨테이너를 넘지 않도록 설정 */
+  max-height: 100%; /* 세로 크기에도 제한을 설정 */
+  width: 75px; /* 기본 크기를 50px로 지정 */
+  height: auto; /* 비율에 맞춰 이미지 높이 자동 조정 */
+  cursor: pointer; /* 커서를 손가락 모양으로 변경 */
+}
+
+.indicator .icons img {
+  max-width: 100%; /* 이미지가 컨테이너를 넘지 않도록 설정 */
+  max-height: 100%; /* 세로 크기에도 제한을 설정 */
+  width: 10px; /* 기본 크기를 50px로 지정 */
+  height: auto; /* 비율에 맞춰 이미지 높이 자동 조정 */
+  cursor: pointer; /* 커서를 손가락 모양으로 변경 */
+}
+
+@media (min-width: 992px) {
+  .raw .service-type .content {
+    flex: auto;
+  }
+}
+
+/* 텍스트입니다 */
+@media (min-width: 992px) {
+  .raw .service-type .service-title {
+    font-size: 1.14583vw;
+    margin-bottom: 1.042vw;
+  }
+}
+@media (min-width: 992px) {
+  .raw .service-type .service-content {
+    font-size: 0.83vw;
+  }
+}
+
+.service-title {
+  font-weight: bold; /* 글씨 두께 설정 */
+}
+
+.service-content {
+  padding-left: 0; /* 리스트를 왼쪽에 맞추기 */
+  list-style-position: inside; /* 리스트 아이콘을 안쪽에 배치 */
+}
+
+/* 레뷰 파트너스 장점 부분입니다. */
+@media (min-width: 992px) {
+  .what-do-you-like-section {
+    padding-top: 8.4vw;
+    padding-bottom: 5.2vw;
+  }
+}
+.introduction-page .what-do-you-like-section {
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 992px) {
+  .what-do-you-like-section .introduction-container {
+    padding-left: 17.7vw;
+    padding-right: 17.7vw;
+  }
+}
+.what-do-you-like-section .introduction-container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media (min-width: 992px) {
+  .what-do-you-like-section .section-heading {
+    margin-bottom: 4.6vw;
+  }
+}
+.what-do-you-like-section .section-heading {
+  margin-bottom: 60px;
+  /* font-size: 2em; */
+  text-align: center;
+}
+
+/* 컬럼부분입니다 */
+@media (min-width: 992px) {
+  .what-do-you-like-section .d-flex.row-reverse-desk {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (min-width: 992px) {
+  .what-do-you-like-section .d-flex {
+    flex-direction: row;
+    margin-bottom: 100px;
+  }
+}
+/* @media (min-width: 992px) {
+  .what-do-you-like-section .pt-7-lg {
+    padding-top: 7vw;
+  }
+} */
+
+@media (min-width: 992px) {
+  .d-flex .col-equal {
+    flex: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .what-do-you-like-section .d-flex.row-reverse-desk .col-txt {
+    margin-left: 85px;
+  }
+}
+.what-do-you-like-section .d-flex .col-txt {
+  margin-bottom: 22px;
+}
+
+/* 칼럼 최종 텍스트 부분입니다 */
+@media (min-width: 992px) {
+  .what-do-you-like-section .index {
+    font-size: 4.127vw;
+  }
+}
+.what-do-you-like-section .index {
+  color: #ececec;
+  /* font-size: 35px; */
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+  .what-do-you-like-section .title-block {
+    font-size: 1.25vw;
+    margin-bottom: 25px;
+    color: #000;
+  }
+}
+.what-do-you-like-section .title-block {
+  display: block;
+  /* font-size: 20px; */
+  letter-spacing: -0.33px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+@media (min-width: 992px) {
+  .what-do-you-like-section .d-flex .col-equal {
+    flex: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .what-do-you-like-section .d-flex.row-reverse-desk .col-img {
+    margin-left: -30px;
+    margin-right: -55px;
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.main-img,
+.small-img-1 {
+  width: 100%;
+  height: auto;
+  opacity: 100; /* 초기에는 보이지 않도록 설정 */
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.small-img-1 {
+  position: absolute;
+  width: 150px; /* 작은 이미지 크기 */
+  transform: translateY(50px); /* 스크롤 전에는 약간 아래로 이동 */
+  right: 0;
+  top: -100px;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 섹션 4부분입니다 */
+
+@media (min-width: 992px) {
+  .brands-section {
+    padding-top: 100px;
+    padding-bottom: 188px;
+  }
+}
+.brands-section {
+  padding-top: 80px;
+  padding-bottom: 160px;
+  background-color: #0d0d0d;
+}
+
+@media (min-width: 992px) {
+  .introduction-container {
+    padding-left: 17.7vw;
+    padding-right: 17.7vw;
+  }
+}
+@media (min-width: 992px) {
+  .introduction-container {
+    padding-left: 17.7vw;
+    padding-right: 17.7vw;
+  }
+}
+
+.introduction-container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@media (min-width: 992px) {
+  .brands-section .section-heading {
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 992px) {
+  .brands-section .section-heading {
+    margin-bottom: 100px;
+  }
+}
+.introduction-container .section-heading {
+  margin-bottom: 60px;
+  color: #000;
+  margin-right: auto;
+  text-align: left;
+  /* padding-left: 17.7vw; */
+}
+
+.brands-section img {
+  max-width: 100%;
+}
+img {
+  vertical-align: middle;
+  border: 0;
+  object-fit: cover;
+  cursor: pointer;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 인플루언서 / 블로그 부분입니다 */
+
+@media (min-width: 992px) {
+  .influencers-section {
+    padding-top: 5.2vw;
+  }
+}
+
+.introduction-page .influencers-section {
+  padding-top: 80px;
+  padding-bottom: 150px;
+  background-color: #f4f4f4;
+}
+
+@media (min-width: 992px) {
+  .influencers-section .section-heading {
+    margin-bottom: 5.3vw;
+  }
+}
+
+.influencers-section .section-heading {
+  margin-bottom: 60px;
+  /* font-size: 2em; */
+  text-align: left;
+  letter-spacing: 0.4px;
+}
+
+.blog-posts {
+  display: flex;
+  justify-content: space-between; /* 요소들 사이의 간격을 조절 */
+  flex-wrap: nowrap; /* 한 행에 모든 요소가 배치되도록 설정 */
+  overflow-x: auto; /* 내용이 넘칠 경우 가로 스크롤을 허용 */
+  gap: 20px; /* 요소 간의 간격 */
+}
+
+@media (min-width: 992px) {
+  .blog-post {
+    width: calc(33.333% - 20px); /* 3열 배치, 간격 포함 */
+  }
+}
+
+.blog-post {
+  flex: 0 0 auto; /* 자식 요소의 너비가 줄지 않도록 설정 */
+  width: 300px; /* 각 블로그 포스트의 고정 너비 설정 */
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.blog-post img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.blog-title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  display: block;
+  color: #333;
+}
+
+.blog-description {
+  font-size: 1em;
+  color: #666;
+}
+
+/* 메인섹션 6 빠른상담문의 */
+
+.inquiry-section {
+  padding: 80px 20px; /* 상하 여백과 좌우 여백 설정 */
+  background-color: #f9f9f9; /* 부드러운 배경색 설정 */
+  text-align: left; /* 텍스트 중앙 정렬 */
+  color: #000;
+}
+
+.introduction-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.inquiry-section .section-heading {
+  /* font-size: 2.5em; 제목 크기 수정 */
+  margin-bottom: 20px; /* 제목과 다음 요소 사이 간격 */
+  font-weight: 700; /* 굵은 글씨 */
+}
+
+.inquiry-section .desc {
+  font-size: 1.2em; /* 설명 글씨 크기 */
+  color: #555; /* 설명 글씨 색상 */
+  margin-bottom: 40px; /* 설명과 다음 요소 간격 */
+  text-align: left;
+}
+
+.section-heading {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: left;
+  letter-spacing: 0.4px;
+  font-weight: 700;
+}
+
+/* .kind-of-service .section-heading,
+.kind-of-service .short-desc {
+  text-align: center;
+} */
+
+.desc {
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.form-content {
+  flex: 1;
+  max-width: 48%;
+}
+
+.input-row {
+  margin-bottom: 20px;
+}
+
+/* 문의하기 폼 부분입니다. */
+
+/* .group-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-input label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.group-input input,
+.group-input textarea,
+.group-input select {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+} */
+
+.group-input {
+  display: flex;
+  align-items: center; /* label과 input을 세로로 중앙 정렬 */
+  margin-bottom: 10px; /* 각 입력 그룹 사이의 간격 설정 */
+  border-bottom: 1px solid #ccc; /* 라인 형태로 하단에만 테두리 */
+  padding-bottom: 15px;
+  gap: 50px;
+}
+
+.input-row:last-child .group-input {
+  padding-bottom: 0;
+}
+
+.group-input label {
+  margin-right: 10px; /* label과 input 사이의 간격 */
+  font-size: 1em; /* label의 글씨 크기 */
+  white-space: nowrap; /* label이 여러 줄로 표시되지 않게 함 */
+  display: inline-block;
+  width: 60px;
+}
+
+.group-input input,
+.group-input select {
+  border: none; /* 테두리 제거 */
+  padding: 5px 0; /* input 내부 여백 조정 */
+  font-size: 1em; /* input 글씨 크기 */
+  outline: none; /* 포커스 시 외곽선 제거 */
+  transition: border-color 0.3s ease; /* 포커스 시 부드럽게 변화 */
+}
+
+.group-input input {
+  flex: 1; /* 남은 공간을 input이 차지하도록 설정 */
+}
+
+.group-input input:focus {
+  border-bottom: 1px solid #007bff; /* 포커스 시 테두리 색 변경 */
+}
+
+/* 문의하기 폼부분 끝입니다 */
+
+.submit-btn-wrapper {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.btn-submit-inquiry {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.image-wrapper {
+  flex: 1;
+  max-width: 48%;
+  text-align: center;
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 문의하기 부분입니다. */
+
+.inquiry-section .form-wrapper .btn-submit-inquiry {
+  background-color: #474747;
+  border-radius: 0;
+  border: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  color: #fff;
+  font-weight: 500;
+  width: 100%;
+}
+
+/* 푸터 부분입니다. */
+
+footer {
+  background-color: #f4f4f4;
+  padding: 40px 0;
+  color: #333;
+}
+
+.introduction-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.influencers-section .introduction-container {
+  overflow: auto;
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+  text-align: left; /* 로고를 왼쪽으로 정렬 */
+  margin-left: 0; /* 필요 시 여백 조정 */
+}
+
+.footer-logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  text-align: left;
+}
+
+.footer-content a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: inherit; /* 링크 색상을 기본 텍스트 색상과 동일하게 설정 */
+  pointer-events: none; /* 클릭할 수 없도록 설정 */
+}
+
+.left-info,
+.right-info {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.left-info {
+  max-width: 70%;
+}
+
+.right-info {
+  max-width: 30%;
+  text-align: right;
+}
+
+.left-info p,
+.right-info p {
+  margin: 5px 0;
+}
+
+.seperate {
+  margin: 0 10px;
+  color: #ccc;
+}
+
+.phone {
+  font-size: 1.5em;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+/* 반응형 디자인으로 수정하고있습니다. 푸터부분 */
+/* @media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  } */
+/* 데스크탑 */
+@media (min-width: 992px) {
+  .footer-content {
+    flex-direction: row;
+  }
+}
+/* 모바일 */
+@media (max-width: 767px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}
+/* 푸터부분 반응형 디자인 적용 */
+
+.left-info,
+.right-info {
+  max-width: 100%;
+  /* text-align: left;/// */
+}
+
+.right-info {
+  margin-top: 20px;
+}
+
+.section-heading.plusjun {
+  color: white;
+}
+
+/* 추가수정부분 */
+
+/* 인플루언서 배경색 수정 */
+#influencers {
+  background-color: #f0f0f0; /* 배경색을 참고자료에 맞게 설정 */
+  /* 추가 스타일을 원할 경우 여기에 */
+}
+
+/* 인플루언서 배경색 수정 */
+
+#anchor-sec-contact {
+  background-color: transparent; /* 배경색을 참고자료에 맞게 설정 */
+  /* 추가 스타일 */
+}
+
+.inquiry-section {
+  padding-bottom: 50px; /* 추가적인 여백을 설정 */
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.2); /* 가느다란 회색 선 추가 */
+  margin-bottom: 20px; /* 선과 푸터 사이의 간격 */
+}
+
+/* 반응형 디자인을 위한 내용추가 */

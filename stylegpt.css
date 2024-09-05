@@ -1,0 +1,111 @@
+/* 슬라이드 이미지 반응형 추가입니다. */
+/* 모바일 */
+@media (max-width: 767px) {
+  .slider {
+    height: 200px;
+  }
+}
+
+/* 태블릿 */
+@media (min-width: 768px) and (max-width: 991px) {
+  .slider {
+    height: 300px;
+  }
+}
+
+/* 데스크탑 */
+@media (min-width: 992px) {
+  .slider {
+    height: 100vh; /* 화면 전체 높이 */
+  }
+}
+/* 슬라이드 이미지 반응형 추가 종료 부분입니다. */
+/* 122~143 */
+
+/* 헤더 반영형 폰트크기 고정입니다 */
+/* 데스크탑 */
+@media (min-width: 992px) {
+  .header {
+    font-size: 24px;
+  }
+  .header img {
+    max-width: 100px;
+  }
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
+  .header {
+    font-size: 16px;
+  }
+  .header img {
+    max-width: 100px;
+  }
+}
+
+/* 헤더 반영형 폰트크기 고정끝부분입니다 */
+
+/* 컨테이너 너비 반응형 추가입니다 */
+/* 모바일 */
+@media (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+}
+
+/* 테블릿 ~ 데스크탑 */
+@media (min-width: 992px) {
+  .container {
+    width: 80%;
+  }
+}
+
+/* 데스크탑 */
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* 컨테이너 너비 반응형 추가 종료부분입니다 */
+/* 163~208 */
+
+/* 네브바 버튼 반응형 추가부분입니다. */
+
+/* 모바일 */
+@media (max-width: 767px) {
+  .navbar-button {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* 데스크탑 */
+@media (min-width: 992px) {
+  .navbar-button {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav-container {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .navbar {
+    font-size: 15px;
+  }
+  .nav-header img {
+    width: 150px;
+  }
+
+  .login-button {
+    font-size: 15px;
+    padding: 8px 16px;
+  }
+
+  .dropdown-menu {
+    min-width: 200px;
+  }
+}
+/* 네브바 버튼 반응형 추가끝부분입니다. */
+/* 204~ */
