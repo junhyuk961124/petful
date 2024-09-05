@@ -450,25 +450,6 @@ body {
   cursor: pointer; /* 커서를 손가락 모양으로 변경 */
 }
 
-@media (min-width: 992px) {
-  .raw .service-type .content {
-    flex: auto;
-  }
-}
-
-/* 텍스트입니다 */
-@media (min-width: 992px) {
-  .raw .service-type .service-title {
-    font-size: 1.14583vw;
-    margin-bottom: 1.042vw;
-  }
-}
-@media (min-width: 992px) {
-  .raw .service-type .service-content {
-    font-size: 0.83vw;
-  }
-}
-
 .service-title {
   font-weight: bold; /* 글씨 두께 설정 */
 }
@@ -479,51 +460,34 @@ body {
 }
 
 /* 레뷰 파트너스 장점 부분입니다. */
-@media (min-width: 992px) {
-  .what-do-you-like-section {
-    padding-top: 8.4vw;
-    padding-bottom: 5.2vw;
-  }
-}
 .introduction-page .what-do-you-like-section {
-  padding-top: 80px;
-  padding-bottom: 60px;
+  padding-top: 8.4vw;
+  padding-bottom: 5.2vw;
+  /* padding-top: 80px;
+  padding-bottom: 60px; */
 }
 
-@media (min-width: 992px) {
-  .what-do-you-like-section .introduction-container {
-    padding-left: 17.7vw;
-    padding-right: 17.7vw;
-  }
-}
 .what-do-you-like-section .introduction-container {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 17.7vw;
+  padding-right: 17.7vw;
+  padding-top: 8.6vh;
+  padding-bottom: 0;
 }
 
-@media (min-width: 992px) {
-  .what-do-you-like-section .section-heading {
-    margin-bottom: 4.6vw;
-  }
-}
 .what-do-you-like-section .section-heading {
-  margin-bottom: 60px;
+  margin-bottom: 4.6vw;
   /* font-size: 2em; */
   text-align: center;
 }
 
 /* 컬럼부분입니다 */
-@media (min-width: 992px) {
-  .what-do-you-like-section .d-flex.row-reverse-desk {
-    flex-direction: row-reverse;
-  }
+.what-do-you-like-section .d-flex.row-reverse-desk {
+  flex-direction: row-reverse;
 }
 
-@media (min-width: 992px) {
-  .what-do-you-like-section .d-flex {
-    flex-direction: row;
-    margin-bottom: 100px;
-  }
+.what-do-you-like-section .d-flex {
+  flex-direction: row;
+  margin-bottom: 100px;
 }
 /* @media (min-width: 992px) {
   .what-do-you-like-section .pt-7-lg {
@@ -531,61 +495,43 @@ body {
   }
 } */
 
-@media (min-width: 992px) {
-  .d-flex .col-equal {
-    flex: 1;
-  }
+.d-flex .col-equal {
+  flex: 1;
 }
 
-@media (min-width: 992px) {
-  .what-do-you-like-section .d-flex.row-reverse-desk .col-txt {
-    margin-left: 85px;
-  }
+.what-do-you-like-section .d-flex.row-reverse-desk .col-txt {
+  margin-left: 85px;
 }
 .what-do-you-like-section .d-flex .col-txt {
   margin-bottom: 22px;
 }
 
 /* 칼럼 최종 텍스트 부분입니다 */
-@media (min-width: 992px) {
-  .what-do-you-like-section .index {
-    font-size: 4.127vw;
-  }
-}
 .what-do-you-like-section .index {
   color: #ececec;
+  font-size: 4.127vw;
   /* font-size: 35px; */
   font-weight: 700;
   letter-spacing: -0.4px;
   margin-bottom: 20px;
 }
 
-@media (min-width: 992px) {
-  .what-do-you-like-section .title-block {
-    font-size: 1.25vw;
-    margin-bottom: 25px;
-    color: #000;
-  }
-}
 .what-do-you-like-section .title-block {
   display: block;
   /* font-size: 20px; */
   letter-spacing: -0.33px;
-  margin-bottom: 20px;
+  font-size: 1.25vw;
+  margin-bottom: 25px;
   color: #000;
 }
 
-@media (min-width: 992px) {
-  .what-do-you-like-section .d-flex .col-equal {
-    flex: 1;
-  }
+.what-do-you-like-section .d-flex .col-equal {
+  flex: 1;
 }
 
-@media (min-width: 992px) {
-  .what-do-you-like-section .d-flex.row-reverse-desk .col-img {
-    margin-left: -30px;
-    margin-right: -55px;
-  }
+.what-do-you-like-section .d-flex.row-reverse-desk .col-img {
+  margin-left: -30px;
+  margin-right: -55px;
 }
 
 .relative {
@@ -614,46 +560,14 @@ body {
 }
 
 /* 섹션 4부분입니다 */
-
-@media (min-width: 992px) {
-  .brands-section {
-    padding-top: 100px;
-    padding-bottom: 188px;
-  }
-}
 .brands-section {
-  padding-top: 80px;
-  padding-bottom: 160px;
+  padding-top: 100px;
+  padding-bottom: 188px;
   background-color: #0d0d0d;
 }
 
-@media (min-width: 992px) {
-  .introduction-container {
-    padding-left: 17.7vw;
-    padding-right: 17.7vw;
-  }
-}
-@media (min-width: 992px) {
-  .introduction-container {
-    padding-left: 17.7vw;
-    padding-right: 17.7vw;
-  }
-}
-
-.introduction-container {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-@media (min-width: 992px) {
-  .brands-section .section-heading {
-    margin-bottom: 100px;
-  }
-}
-@media (min-width: 992px) {
-  .brands-section .section-heading {
-    margin-bottom: 100px;
-  }
+.brands-section .section-heading {
+  margin-bottom: 100px;
 }
 .introduction-container .section-heading {
   margin-bottom: 60px;
@@ -677,26 +591,15 @@ img {
 
 /* 인플루언서 / 블로그 부분입니다 */
 
-@media (min-width: 992px) {
-  .influencers-section {
-    padding-top: 5.2vw;
-  }
-}
-
 .introduction-page .influencers-section {
-  padding-top: 80px;
-  padding-bottom: 150px;
+  padding-top: 5.2vh;
+  padding-bottom: 6.5vh;
   background-color: #f4f4f4;
 }
 
-@media (min-width: 992px) {
-  .influencers-section .section-heading {
-    margin-bottom: 5.3vw;
-  }
-}
-
 .influencers-section .section-heading {
-  margin-bottom: 60px;
+  margin-bottom: 5.3vw;
+  /* margin-bottom: 60px; */
   /* font-size: 2em; */
   text-align: left;
   letter-spacing: 0.4px;
@@ -710,10 +613,31 @@ img {
   gap: 20px; /* 요소 간의 간격 */
 }
 
-@media (min-width: 992px) {
-  .blog-post {
-    width: calc(33.333% - 20px); /* 3열 배치, 간격 포함 */
-  }
+#test {
+  position: relative;
+}
+
+#test::before,
+#test::after {
+  display: block;
+  position: absolute;
+  font-size: 100px;
+  top: 50px;
+  width: 100px;
+  height: 100px;
+  color: #747474;
+  cursor: pointer;
+}
+#test::before {
+  content: '<';
+  left: -150px;
+}
+#test::after {
+  content: '>';
+  right: -150px;
+}
+#test :hover {
+  color: #3b3a3a;
 }
 
 .blog-post {
@@ -751,10 +675,10 @@ img {
   color: #000;
 }
 
-.introduction-container {
-  max-width: 1200px;
+.inquiry-section .introduction-container {
+  /* max-width: 1200px; */
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0;
   position: relative;
 }
 
@@ -795,6 +719,7 @@ img {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+  gap: 150px;
 }
 
 .form-content {
@@ -914,9 +839,11 @@ footer {
   background-color: #f4f4f4;
   padding: 40px 0;
   color: #333;
+  padding-left: 17.7vw;
+  padding-right: 17.7vw;
 }
 
-.introduction-container {
+.anchor-sec-contact .introduction-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -926,7 +853,9 @@ footer {
 }
 
 .influencers-section .introduction-container {
-  overflow: auto;
+  /* overflow: auto; */
+  padding-top: 18vh;
+  padding-bottom: 18vh;
 }
 
 .footer-logo {
@@ -992,20 +921,7 @@ footer {
     align-items: center;
     text-align: center;
   } */
-/* 데스크탑 */
-@media (min-width: 992px) {
-  .footer-content {
-    flex-direction: row;
-  }
-}
-/* 모바일 */
-@media (max-width: 767px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-  }
-}
+
 /* 푸터부분 반응형 디자인 적용 */
 
 .left-info,

@@ -109,3 +109,22 @@
 }
 /* 네브바 버튼 반응형 추가끝부분입니다. */
 /* 204~ */
+
+@media (min-width: 992px) {
+  .row .service-type .content {
+    flex: auto;
+  }
+}
+
+/* 텍스트입니다 */
+@media (min-width: 992px) {
+  .row .service-type .service-title {
+    font-size: 1.14583vw;
+    margin-bottom: 1.042vw;
+  }
+}
+@media (min-width: 992px) {
+  .row .service-type .service-content {
+    font-size: 0.83vw;
+  }
+}
