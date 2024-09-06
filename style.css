@@ -960,3 +960,39 @@ footer {
 }
 
 /* 반응형 디자인을 위한 내용추가 */
+@media (max-width: 992px) {
+  /* 네비게이션바 사이즈 조정 */
+  .nav-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .navbar-button {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-button li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  /* 슬라이더 이미지 높이 조정 */
+  #slider-container {
+    height: 70vh;
+  }
+
+  #main-slider .slide img {
+    height: 70vh;
+  }
+
+  /* 메인 텍스트 크기 조정 */
+  .page-heading {
+    font-size: 3vw;
+  }
+
+  .intro-txt-second,
+  .intro-txt-third {
+    font-size: 1.1vw;
+  }
+}

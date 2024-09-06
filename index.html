@@ -444,13 +444,19 @@
 
           <div class="form-wrapper">
             <div class="form-content">
-              <form id="inquiry-form">
+              <form
+                id="inquiry-form"
+                action="https://script.google.com/macros/s/AKfycbyt-eEkwV9HUwiXcu4FF1uG9F9gbvOr2HQK3uo-bZQI1B3L5PVnJRCLFVgzaKd-XVgS/exec"
+                method="post"
+                class="business-form"
+              >
                 <div class="input-row">
                   <div class="group-input">
                     <label for="company-name">업체명</label>
                     <input
                       type="text"
                       id="company-name"
+                      name="companyName"
                       placeholder="업체명입력"
                       required
                     />
@@ -462,6 +468,7 @@
                     <input
                       type="text"
                       id="person-in-charge"
+                      name="personInCharge"
                       placeholder="이름 입력"
                       required
                     />
@@ -473,6 +480,7 @@
                     <input
                       type="tel"
                       id="contact"
+                      name="contact"
                       placeholder="010-1234-5678"
                       required
                     />
@@ -484,6 +492,7 @@
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       placeholder="example@petful.com"
                       required
                     />
@@ -492,7 +501,7 @@
                 <div class="input-row">
                   <div class="group-input">
                     <label for="referral-source">방문 경로</label>
-                    <select id="referral-source" required>
+                    <select id="referral-source" name="referralSource" required>
                       <option value="">선택</option>
                       <option value="petful-customer">펫플 고객사</option>
                       <option value="internet-search">인터넷 검색</option>
@@ -508,6 +517,7 @@
                     <textarea
                       rows="2"
                       id="inquiries"
+                      name="inquiries"
                       placeholder="문의내용"
                       required
                     ></textarea>

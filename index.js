@@ -332,53 +332,80 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // 고객문의 페이지 modal 및 google spredsheet
-document
-  .getElementById('inquiry-form')
-  .addEventListener('submit', function (e) {
-    e.preventDefault(); // 기본 폼 제출 동작을 방지
+// document
+//   .getElementById('inquiry-form')
+//   .addEventListener('submit', function (e) {
+//     e.preventDefault(); // 기본 폼 제출 동작을 방지
 
-    // 폼 데이터 가져오기
-    const companyName = document.getElementById('company-name').value;
-    const personInCharge = document.getElementById('person-in-charge').value;
-    const contact = document.getElementById('contact').value;
-    const email = document.getElementById('email').value;
-    const referralSource = document.getElementById('referral-source').value;
-    const inquiries = document.getElementById('inquiries').value;
+//     // 폼 데이터 가져오기
+//     const companyName = document.getElementById('company-name').value;
+//     const personInCharge = document.getElementById('person-in-charge').value;
+//     const contact = document.getElementById('contact').value;
+//     const email = document.getElementById('email').value;
+//     const referralSource = document.getElementById('referral-source').value;
+//     const inquiries = document.getElementById('inquiries').value;
 
-    // 전송할 데이터 객체
-    const data = {
-      companyName,
-      personInCharge,
-      contact,
-      email,
-      referralSource,
-      inquiries,
-    };
+//     // 전송할 데이터 객체
+//     const data = {
+//       companyName,
+//       personInCharge,
+//       contact,
+//       email,
+//       referralSource,
+//       inquiries,
+//     };
 
-    // Google Apps Script 웹 애플리케이션 URL (실제 URL로 교체해야 합니다)
-    const scriptURL =
-      'https://script.google.com/macros/s/AKfycbyt-eEkwV9HUwiXcu4FF1uG9F9gbvOr2HQK3uo-bZQI1B3L5PVnJRCLFVgzaKd-XVgS/exec';
+//     // Google Apps Script 웹 애플리케이션 URL (실제 URL로 교체해야 합니다)
+//     const scriptURL =
+//       'https://script.google.com/macros/s/AKfycbyt-eEkwV9HUwiXcu4FF1uG9F9gbvOr2HQK3uo-bZQI1B3L5PVnJRCLFVgzaKd-XVgS/exec';
 
-    // 데이터 전송
-    fetch(scriptURL, {
+// <!-- 문의 부분 직접추가  -->
+// <!-- // 데이터 전송 -->
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('inquiry-form');
+  const submitButton = document.querySelector('.btn-submit-inquiry');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // 기본 제출 동작을 막음
+    submitButton.disabled = true; // 버튼을 비활성화해서 중복 제출 방지
+    submitButton.textContent = '처리 중...'; // 처리 중이라는 문구로 변경
+
+    // FormData 객체 생성
+    const formData = new FormData(form);
+
+    // 데이터를 fetch로 전송
+    fetch(form.action, {
       method: 'POST',
-      body: JSON.stringify(data),
-      headers: {
-        'Content-Type': 'application/json',
-      },
+      body: formData,
+      mode: 'no-cors', // CORS 정책을 무시
     })
-      .then((response) => response.json())
-      .then((responseData) => {
-        if (responseData.status === 'success') {
-          alert('문의가 성공적으로 제출되었습니다!');
-          // 폼 초기화 (필요에 따라 추가)
-          document.getElementById('inquiry-form').reset();
+      .then((response) => {
+        if (response.ok) {
+          // 폼 제출 성공 시 모달을 띄우거나 상태를 알려줌
+          showModal();
+          submitButton.textContent = '문의 완료'; // 완료 메시지로 변경
+          submitButton.disabled = true; // 버튼 비활성화
+          form.reset(); // 폼 리셋
         } else {
-          alert('문의 제출에 실패했습니다. 다시 시도해주세요.');
+          return response.text().then((text) => {
+            alert('폼 제출에 실패했습니다. 다시 시도해주세요.\n' + text);
+            submitButton.textContent = '문의하기'; // 버튼 문구 복구
+            submitButton.disabled = false; // 버튼 다시 활성화
+          });
         }
       })
       .catch((error) => {
-        console.error('Error:', error);
-        alert('오류가 발생했습니다. 나중에 다시 시도해주세요.');
+        console.error('Error!', error);
+        alert('폼 제출에 실패했습니다. 다시 시도해주세요.\n' + error.message);
+        submitButton.textContent = '문의하기'; // 오류 시 버튼 문구 복구
+        submitButton.disabled = false; // 버튼 다시 활성화
       });
   });
+
+  // 모달을 띄우는 함수
+  function showModal() {
+    const modal = document.getElementById('myModal');
+    const modalInstance = new bootstrap.Modal(modal);
+    modalInstance.show();
+  }
+});
